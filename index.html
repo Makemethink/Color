@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <title>The Work</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <style>
+
+*{
+
+}
+label{
+  border: 1px solid #dadada;
+  padding-top: 20px;
+  color: grey;
+  margin-bottom: 20px;
+  height: 100px;
+  width:145px;
+  transition: all 400ms linear;
+}
+p{
+  font-size:20px;
+  color: grey;
+}
+::selection {
+  color: none;
+  background: none;
+}
+.do{
+  visibility: hidden;
+}
+.do:checked + label{
+  Color: black;
+  background: silver;
+}
+
+
+  </style>
+</head>
+<body id="body">
+
+
+<nav class="navbar navbar-default">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">Checked</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">We</a></li>
+        <li><a href="#">You</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<div class="container bg-1 text-center ">
+   <h2 style="margin-top: 60px;color: grey">Hey what's up guys!</h2><br>
+<p>Hola! Nice to see you, this is an site where you can check the various color schemes. Select the color representation and type color and click button.</p><br>
+<br>   <input type="radio" name="gender" class="do" id="not" value="">
+ <label for="not"> Color<pre style="color: grey;background: none;border:none">Type: Name</pre></label>
+
+  <input type="radio" name="gender" class="do" id="now" value="#">
+  <label for="now"> Hex<pre style="color: grey;background: none;border:none">Type: Hex-code</pre></label>
+
+ <input type="radio" name="gender" class="do" id="till" value="rgb">
+ <label for="till">Rgb <pre style="color: grey;background: none;border:none">Eg: (255,255,255)</pre></label>
+
+<br>
+   <br>
+   <input type="text" name="" style="outline:none; padding:10px; width:300px" value="" class="ha" id="most" placeholder="Search"><br><br>
+
+   <input style="outline:none;margin-bottom:20px;" onclick="displayRadioValue()" class="btn btn-default btn-lg" type="button" id="box" onclick="record()" value="Show me" >
+
+
+<script>
+    function displayRadioValue() {
+        var ele = document.getElementsByName('gender');
+
+        for(i = 0; i < ele.length; i++) {
+            if(ele[i].checked) {
+                     var t= ele[i].value;
+     }
+        }
+
+        var z = document.getElementById("most").value;
+        var d = t + z;
+        document.getElementById("body").style.backgroundColor = d;
+    }
+
+</script>
+
+</body>
+</html>
